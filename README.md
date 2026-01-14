@@ -12,37 +12,63 @@ Este proyecto es una solución para el ejercicio de procesamiento de datos de al
 
 ## Instalación y Ejecución
 
-Sigue estos pasos para configurar y ejecutar el proyecto. Se asume que tienes Python 3 instalado.
+Sigue estos pasos para configurar y ejecutar el proyecto. Se asume que tienes Python 3 y Git instalados.
 
-1.  **Crear el Entorno Virtual**
+1.  **Clonar el Repositorio**
 
-    Se recomienda usar un entorno virtual para aislar las dependencias del proyecto.
+    Primero, clona este repositorio en tu máquina local desde GitHub.
 
     ```bash
-    python3 -m venv practica_diccionarios
+    git clone <URL_DEL_REPOSITORIO>
+    cd <NOMBRE_DEL_DIRECTORIO_CLONADO>
     ```
+    *(Nota: Deberás reemplazar la URL y el nombre del directorio con los valores correctos).*
 
-2.  **Activar el Entorno Virtual**
+2.  **Crear el Entorno Virtual**
 
-    Para empezar a usar el entorno, actívalo con el siguiente comando (en macOS y Linux):
+    Un **entorno virtual** (`venv`) es un directorio aislado que contiene una instalación de Python y unas dependencias específicas para un proyecto. Esto evita conflictos entre las librerías de diferentes proyectos.
+
+    Una vez dentro del directorio del proyecto, crea el entorno virtual:
     ```bash
-    source practica_diccionarios/bin/activate
+    python -m venv practica_diccionarios
     ```
 
-3.  **Instalar Dependencias**
+3.  **Activar el Entorno Virtual**
 
-    El proyecto utiliza `matplotlib` para generar la gráfica. Instálalo usando el fichero `requirements.txt`.
+    La activación varía según el sistema operativo y la terminal que uses:
+
+    - **En macOS y Linux (Bash/Zsh):**
+      ```bash
+      source practica_diccionarios/bin/activate
+      ```
+    - **En Windows (Command Prompt - CMD):**
+      ```bash
+      practica_diccionarios\Scripts\activate.bat
+      ```
+    - **En Windows (PowerShell, terminal por defecto en VS Code o ):**
+      ```powershell
+      .\practica_diccionarios\Scripts\Activate.ps1
+      ```
+      > **Solución de problemas en PowerShell:** Si al ejecutar este comando recibes un error sobre que la ejecución de scripts está deshabilitada, abre una nueva terminal de PowerShell y ejecuta lo siguiente (solo necesitas hacerlo una vez en tu equipo):
+      > ```powershell
+      > Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+      > ```
+      > Confirma la acción con `S` o `Y` y vuelve a intentar la activación.
+
+4.  **Instalar Dependencias**
+
+    Con el entorno activado, instala las librerías necesarias.
 
     ```bash
     pip install -r requirements.txt
     ```
 
-4.  **Ejecutar el Script**
+5.  **Ejecutar el Script**
 
-    Una vez las dependencias estén instaladas, ejecuta el script principal:
+    Finalmente, ejecuta el script principal:
 
     ```bash
-    python3 main.py
+    python main.py
     ```
 
 ## Salida del Programa
